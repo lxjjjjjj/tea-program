@@ -14,12 +14,15 @@ export default class Index extends Component {
 
   componentDidHide () { }
 
+  handleScale (e) { 
+    console.log(e)
+  }
   render () {
     return (
       <View className='index'>
         <MovableArea className='container'>
           <View class="static"></View>
-          <MovableView className='move' direction='all'>旅行的意义</MovableView>
+          <MovableView className='move' scale={true} direction='all' onScale='handleScale'>旅行的意义</MovableView>
         </MovableArea>
       </View>
     )
